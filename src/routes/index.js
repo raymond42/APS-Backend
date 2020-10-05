@@ -1,8 +1,10 @@
 import express from "express";
+import usersRouter from "./users";
 // @ initialize app
 
-const app = express();
+const router = express();
 
 //@ router configuration
+router.use("/auth", usersRouter);
 
-export default app;
+export default router;
